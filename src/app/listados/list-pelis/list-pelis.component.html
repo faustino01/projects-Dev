@@ -1,0 +1,11 @@
+
+
+<app-listado-generico-pelis [listado]="listPelis">
+    <ng-container contenido>
+       <div *ngFor="let peli of listPelis">
+            {{peli.Nombre}}<br>
+            {{peli.Genero}}<br>
+            {{peli.anio}}<br><br>
+       </div>
+    </ng-container>
+</app-listado-generico-pelis>

@@ -1,0 +1,14 @@
+<div *ngIf="!listado">
+    Cargando....
+</div>
+
+<div *ngIf="listado?.length === 0">
+    No hay nada que mostrar
+</div>
+
+<ng-container *ngIf="listado && listado.length > 0" >
+    <ng-content select="[contenido]"></ng-content>
+</ng-container>
+
+
+
