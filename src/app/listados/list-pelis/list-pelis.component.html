@@ -2,10 +2,33 @@
 
 <app-listado-generico-pelis [listado]="listPelis">
     <ng-container contenido>
-       <div *ngFor="let peli of listPelis">
-            {{peli.Nombre}}<br>
-            {{peli.Genero}}<br>
-            {{peli.anio}}<br><br>
-       </div>
+        <div class="peliculas-contenedor">
+            <div *ngFor="let peli of listPelis" class="pelicula-contenedor">
+                <a>
+                    <img [src]="peli.poster" alt="Poster">
+                </a>
+                <p>
+                    <a>{{peli.Nombre}}</a><br>
+                   
+                </p>
+                <div>
+                   
+                        {{peli.Genero}}<br>
+                        {{peli.Anio}}<br><br>
+                   
+                </div>
+               
+                <div>
+                    <a mat-flat-button color="primary">
+                        Editar
+                    </a>
+                    <button mat-flat-button color="warn" type="button">
+                        Borrar
+                    </button>
+                </div>
+                
+           </div>
+        </div>
+  
     </ng-container>
 </app-listado-generico-pelis>

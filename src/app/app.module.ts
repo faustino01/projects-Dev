@@ -13,6 +13,17 @@ import { ListadoGenericoPelisComponent } from './utilidades/listado-generico-pel
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReatingComponent } from './utilidades/reating/reating.component';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CrearGeneroComponent } from './generos/crear-genero/crear-genero.component';
+import { CrearActorComponent } from './actores/crear-actor/crear-actor.component';
+import { CrearPeliculaComponent } from './peliculas/crear-pelicula/crear-pelicula.component';
+import { CrearCinesComponent } from './cines/crear-cines/crear-cines.component';
+import { IndiceCinesComponent } from './cines/indice-cines/indice-cines.component';
+import { IndiceActoresComponent } from './actores/indice-actores/indice-actores.component';
+import { EditarActorComponent } from './actores/editar-actor/editar-actor.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +33,17 @@ import { ReatingComponent } from './utilidades/reating/reating.component';
     ListPelisComponent,
     ListadoGenericoPelisComponent,
     ReatingComponent,
+    CategoriasComponent,
+    LandingPageComponent,
+    IndiceGenerosComponent,
+    PageNotFoundComponent,
+    CrearGeneroComponent,
+    CrearActorComponent,
+    CrearPeliculaComponent,
+    CrearCinesComponent,
+    IndiceCinesComponent,
+    IndiceActoresComponent,
+    EditarActorComponent,
   ],
   imports: [
     BrowserModule,

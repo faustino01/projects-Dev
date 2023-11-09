@@ -1,29 +1,5 @@
 <app-menu></app-menu>
-
-<!-- <app-reating (rated)="manejarRated($event)"></app-reating> -->
-
 <div>
-    <input type="textt" (input)="title = asignarTitulo($event)">
+    <router-outlet></router-outlet>
+
 </div>
-<div>
-    <input type="checkbox" checked (change)="ocultar = !ocultar" /> ocultar
-</div>
-
-<!-- <h1>{{primerDato}}</h1>
-
-<app-list-pelis [listPelis]="coleccionPelis"></app-list-pelis>
-
-<h1>{{segundoDato}}</h1>
-
-<app-list-pelis [listPelis]="coleccionPelis2"></app-list-pelis>
-
-<br>
-<p>texto : {{texto.value}} </p>
-
-<input type="text" #texto (keyup)="0" [disabled]="inputText">
-<form>
-    <input type="checkbox" (change)="desabledInputText($event)" id="check">
-</form> 
--->
-
-<router-outlet></router-outlet>
