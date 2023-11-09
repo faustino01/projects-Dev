@@ -10,6 +10,7 @@ import { IndiceActoresComponent } from './actores/indice-actores/indice-actores.
 import { CrearActorComponent } from './actores/crear-actor/crear-actor.component';
 import { CrearPeliculaComponent } from './peliculas/crear-pelicula/crear-pelicula.component';
 import { EditarActorComponent } from './actores/editar-actor/editar-actor.component';
+import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
 
 
 
@@ -18,17 +19,16 @@ const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'generos',component: IndiceGenerosComponent},
   {path: 'generos/crear', component: CrearGeneroComponent},
+  {path: 'generos/editar/:id', component: CrearGeneroComponent},
   {path: 'cines' ,component: IndiceCinesComponent},
   {path: 'cines/crear',component: CrearCinesComponent},
+  {path: 'cines/editar/:id',component: EditarCineComponent},
   {path: 'actores' , component: IndiceActoresComponent},
   {path: 'actores/crear', component:CrearActorComponent},
   {path: 'actores/editar/:id', component:EditarActorComponent},
   {path: 'peliculas/crear', component:CrearPeliculaComponent},
-  {path: '**', component: PageNotFoundComponent}
-
-
-
-
+  {path: 'peliculas/editar/:id', component:CrearPeliculaComponent},
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
