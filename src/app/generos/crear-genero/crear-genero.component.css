@@ -1,0 +1,11 @@
+button {
+    margin-right: 1rem;
+}
+form {
+    margin-left: 1rem;
+}
+
+mat-form-field{
+    width: 100%;
+    max-width: 500px;
+}

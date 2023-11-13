@@ -11,21 +11,21 @@ import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-
 import { ListPelisComponent } from './listados/list-pelis/list-pelis.component';
 import { ListadoGenericoPelisComponent } from './utilidades/listado-generico-pelis/listado-generico-pelis.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
-import { ReatingComponent } from './utilidades/reating/reating.component';
-import { CategoriasComponent } from './categorias/categorias.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ReactiveFormsModule    } from '@angular/forms';
+import { ReatingComponent       } from './utilidades/reating/reating.component';
+import { CategoriasComponent    } from './categorias/categorias.component';
+import { LandingPageComponent   } from './landing-page/landing-page.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CrearGeneroComponent } from './generos/crear-genero/crear-genero.component';
-import { CrearActorComponent } from './actores/crear-actor/crear-actor.component';
+import { PageNotFoundComponent  } from './page-not-found/page-not-found.component';
+import { CrearGeneroComponent   } from './generos/crear-genero/crear-genero.component';
+import { CrearActorComponent    } from './actores/crear-actor/crear-actor.component';
 import { CrearPeliculaComponent } from './peliculas/crear-pelicula/crear-pelicula.component';
-import { CrearCinesComponent } from './cines/crear-cines/crear-cines.component';
-import { IndiceCinesComponent } from './cines/indice-cines/indice-cines.component';
+import { CrearCinesComponent    } from './cines/crear-cines/crear-cines.component';
+import { IndiceCinesComponent   } from './cines/indice-cines/indice-cines.component';
 import { IndiceActoresComponent } from './actores/indice-actores/indice-actores.component';
-import { EditarActorComponent } from './actores/editar-actor/editar-actor.component';
-import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
-import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
+import { EditarActorComponent   } from './actores/editar-actor/editar-actor.component';
+import { EditarGeneroComponent  } from './generos/editar-genero/editar-genero.component';
+import { EditarCineComponent    } from './cines/editar-cine/editar-cine.component';
 import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
 
 @NgModule({

@@ -1,3 +1,8 @@
-<p>crear-cines works!</p>
-Generar Nuevo Cine
+<h2>Registrar Nuevo Cine</h2>
+<form [formGroup]="form" >
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre*:</mat-label>
+        <input formControlName="Nombre" matInput>
+    </mat-form-field>
+</form>
 <button mat-flat-button color="primary">Guardar Cine</button>
