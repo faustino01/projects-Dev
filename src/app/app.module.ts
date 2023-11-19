@@ -13,7 +13,6 @@ import { ListadoGenericoPelisComponent } from './utilidades/listado-generico-pel
 
 import { ReactiveFormsModule    } from '@angular/forms';
 import { ReatingComponent       } from './utilidades/reating/reating.component';
-import { CategoriasComponent    } from './categorias/categorias.component';
 import { LandingPageComponent   } from './landing-page/landing-page.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
 import { PageNotFoundComponent  } from './page-not-found/page-not-found.component';
@@ -27,6 +26,8 @@ import { EditarActorComponent   } from './actores/editar-actor/editar-actor.comp
 import { EditarGeneroComponent  } from './generos/editar-genero/editar-genero.component';
 import { EditarCineComponent    } from './cines/editar-cine/editar-cine.component';
 import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
+import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component';
+import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-peliculas.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,6 @@ import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-peli
     ListPelisComponent,
     ListadoGenericoPelisComponent,
     ReatingComponent,
-    CategoriasComponent,
     LandingPageComponent,
     IndiceGenerosComponent,
     PageNotFoundComponent,
@@ -50,6 +50,8 @@ import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-peli
     EditarGeneroComponent,
     EditarCineComponent,
     EditarPeliculaComponent,
+    FormularioGeneroComponent,
+    FiltroPeliculasComponent,
   ],
   imports: [
     BrowserModule,
