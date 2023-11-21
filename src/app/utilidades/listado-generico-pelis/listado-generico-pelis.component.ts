@@ -7,8 +7,6 @@ import { Component,Input } from '@angular/core';
 })
 export class ListadoGenericoPelisComponent{
 
-@Input()
-
-listado:any;
+@Input()listado:any;
 
 }

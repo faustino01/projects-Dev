@@ -3,7 +3,7 @@
 <form [formGroup]="form">
     <mat-form-field appearance="outline">
         <mat-label>Titulo</mat-label>
-        <input formControlName="titulo" matInput />
+        <input formControlName="Nombre" matInput />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -20,8 +20,13 @@
         <mat-checkbox formControlName="enCines">En Cines</mat-checkbox>
     </div>
     
-    <div>
+    <div class="contenerdorLimpiar">
         <button mat-flat-button (click)="limpiar()" color="warn">Limpiar</button>
     </div>
 
 </form>
+
+<!-- <div *ngFor="let title of titulo">
+
+</div> -->
+<app-list-pelis [listPelis]="peliculas" style="margin-top: 3rem;"></app-list-pelis>

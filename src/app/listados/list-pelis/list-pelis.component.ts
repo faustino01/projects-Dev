@@ -6,9 +6,8 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./list-pelis.component.css']
 })
 export class ListPelisComponent implements OnInit {
-  @Input()
-
-  listPelis:any;
+  
+  @Input()listPelis:any;
 
   ngOnInit(): void {
     
