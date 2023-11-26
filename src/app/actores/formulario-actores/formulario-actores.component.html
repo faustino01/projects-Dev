@@ -1,0 +1,15 @@
+<p>formulario-actores works!</p>
+
+<form [formGroup]="Form">
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre*</mat-label>
+    <input formControlName="nombre" matInput>
+    <mat-error>El campo es requerido</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Fecha de Nacimiento</mat-label>
+    <input formControlName="fechaNacimiento" matInput />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</form>
