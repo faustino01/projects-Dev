@@ -25,7 +25,7 @@ export class FormularioGeneroComponent implements OnInit {
       }]
     });
     if(this.modelo !== undefined){
-        console.log(this.modelo);
+       
         this.form.patchValue(this.modelo);
       
     }

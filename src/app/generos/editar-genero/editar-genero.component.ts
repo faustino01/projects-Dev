@@ -14,7 +14,7 @@ export class EditarGeneroComponent {
   constructor(private router:Router){}
 
   guardarFormEditFather(genero : generoCreacionDTO){
-    console.log(genero);
+   
     this.router.navigate(['/generos']);
   }
 }

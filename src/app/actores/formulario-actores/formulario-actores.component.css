@@ -1,5 +1,6 @@
 form{
   max-width: 500px;
+  margin-left: 1rem;
 }
 mat-form-field{
   width: 100%;

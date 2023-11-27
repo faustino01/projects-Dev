@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
+import { actoresCreacionDTO } from '../actores';
 
 @Component({
   selector: 'app-formulario-actores',
@@ -9,18 +8,32 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./formulario-actores.component.css']
 })
 export class FormularioActoresComponent implements OnInit {
+
+    @Input() modeloChild!:actoresCreacionDTO;
+    @Output() submit:EventEmitter<actoresCreacionDTO> = new EventEmitter<actoresCreacionDTO>();
+
+  
     Form!:FormGroup;
+
     constructor(private formBuilder:FormBuilder){}
+
     ngOnInit(): void {
       this.Form = this.formBuilder.group( {
-        name :['',
-          {
-            validators: [Validators.required]
-          }
-      ],
-        fechaNacimiento: ''
+        Nombre :['',
+                    {
+                      validators: [Validators.required]
+                    }
+                ],
+       fechaNacimiento: ''
       });
+
+      if(this.modeloChild !== undefined){
+        this.Form.patchValue(this.modeloChild);
+      }
+ 
     }
 
-
+    Onsubmit() {
+      this.submit.emit(this.Form.value);
+    }
 }
