@@ -7,12 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
-import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
 import { ListPelisComponent } from './listados/list-pelis/list-pelis.component';
 import { ListadoGenericoPelisComponent } from './utilidades/listado-generico-pelis/listado-generico-pelis.component';
 
 import { ReactiveFormsModule    } from '@angular/forms';
-import { ReatingComponent       } from './utilidades/reating/reating.component';
+
 import { LandingPageComponent   } from './landing-page/landing-page.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
 import { PageNotFoundComponent  } from './page-not-found/page-not-found.component';
@@ -35,10 +34,8 @@ import { InputImgComponent } from './utilidades/input-img/input-img.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    ListadoGenericoComponent,
     ListPelisComponent,
     ListadoGenericoPelisComponent,
-    ReatingComponent,
     LandingPageComponent,
     IndiceGenerosComponent,
     PageNotFoundComponent,
