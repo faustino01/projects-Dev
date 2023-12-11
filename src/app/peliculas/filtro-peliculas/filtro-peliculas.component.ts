@@ -23,9 +23,9 @@ export class FiltroPeliculasComponent implements OnInit {
   ];
 
   peliculas = [
-    {Nombre : 'OppenHeimer', enCines : false, proximosEstrenos:true, generos: [1,2], poster: './assets/img/open.jpg'},
-    {Nombre : 'Madam Web', enCines : false, proximosEstrenos:true, generos: [1,2], poster: './assets/img/mweb.jpg'},
-    {Nombre : 'One Piece', enCines : true, proximosEstrenos:false, generos: [2], poster: './assets/img/one.jpg'},
+    {Nombre : 'OppenHeimer', enCines : false, proximosEstrenos:true, generos: [1,2], poster: './assets/img/movies/open.jpg'},
+    {Nombre : 'Madam Web', enCines : false, proximosEstrenos:true, generos: [1,2], poster: './assets/img/movies/mweb.jpg'},
+    {Nombre : 'One Piece', enCines : true, proximosEstrenos:false, generos: [2], poster: './assets/img/movies/one.jpg'},
   ];
 
   peliculasOriginal = this.peliculas;

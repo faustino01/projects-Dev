@@ -26,26 +26,26 @@ export class LandingPageComponent implements OnInit{
       this.coleccionPelis = [{Nombre: 'Guardianes de la Galaxia',
                             Genero: 'Ciencia Ficcion, Espacio',
                             Anio: '2023',
-                            poster: './assets/img/guardianes.jpg'
+                            poster: './assets/img/movies/guardianes.jpg'
                             },
                             {Nombre: 'Vieaje de chihiro',
                             Genero: 'Ciencia Ficcion, Anime, Aventura',
                             Anio: '2000',
-                            poster: './assets/img/chihiro.jpg'
+                            poster: './assets/img/movies/chihiro.jpg'
                           },
                             {Nombre: 'Terminator 2',
                             Genero: 'Ciencia Ficcion, Accion, Aventura, Suspenso',
                             Anio: '2000',
-                            poster: './assets/img/t2.jpg'}
+                            poster: './assets/img/movies/t2.jpg'}
                            ];
       this.coleccionPelis2 = [{Nombre: 'Dracula',
                                 Genero: 'Terror, Suspenso',
                                 Anio: '2023',
-                                poster: './assets/img/dracula.jpg'},
+                                poster: './assets/img/movies/dracula.jpg'},
                                 {Nombre: 'Batman',
                                 Genero: 'Ciencia Ficcion, Accion, Aventura',
                                 Anio: '2018',
-                                poster: './assets/img/batman.jpg'}
+                                poster: './assets/img/movies/batman.jpg'}
                           ];
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { actoresCreacionDTO } from '../actores';
+import { actoresCreacionDTO, actoresDTO } from '../actores';
 
 @Component({
   selector: 'app-formulario-actores',
@@ -9,7 +9,7 @@ import { actoresCreacionDTO } from '../actores';
 })
 export class FormularioActoresComponent implements OnInit {
 
-    @Input() modeloChild!:actoresCreacionDTO;
+    @Input() modeloChild!:actoresDTO;
     @Output() submit:EventEmitter<actoresCreacionDTO> = new EventEmitter<actoresCreacionDTO>();
 
   
@@ -24,7 +24,8 @@ export class FormularioActoresComponent implements OnInit {
                       validators: [Validators.required]
                     }
                 ],
-       fechaNacimiento: ''
+       fechaNacimiento: '',
+       foto: ''
       });
 
       if(this.modeloChild !== undefined){
@@ -32,8 +33,13 @@ export class FormularioActoresComponent implements OnInit {
       }
  
     }
+    archivoSeleccionadoForm(file:any){
+      this.Form.get('foto')?.setValue(file);
+    }
 
     Onsubmit() {
       this.submit.emit(this.Form.value);
     }
+
+    
 }
