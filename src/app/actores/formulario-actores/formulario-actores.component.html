@@ -16,6 +16,8 @@
 
   <app-input-img [imgImgC] = "modeloChild.foto" (archivoSeleccionadoChild)="archivoSeleccionadoForm($event)"></app-input-img>
   
+  <app-input-markdown (changeMarkdown)="cambioMarkDown($event)"></app-input-markdown>
+
   <div>
       <button mat-flat-button color="primary" [disabled]="Form.invalid">Guardar cambios</button>
       <a mat-stroked-button routerLink="/actores">Cancelar</a>

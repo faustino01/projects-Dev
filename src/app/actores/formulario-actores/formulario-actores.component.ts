@@ -25,7 +25,8 @@ export class FormularioActoresComponent implements OnInit {
                     }
                 ],
        fechaNacimiento: '',
-       foto: ''
+       foto: '',
+       biografia:'',
       });
 
       if(this.modeloChild !== undefined){
@@ -41,5 +42,9 @@ export class FormularioActoresComponent implements OnInit {
       this.submit.emit(this.Form.value);
     }
 
+    cambioMarkDown(texto:any){
+      this.Form.get('biografia')?.setValue(texto);
+
+    }
     
 }

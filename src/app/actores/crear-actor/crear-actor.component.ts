@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { actoresCreacionDTO } from '../actores';
+import { actoresCreacionDTO, actoresDTO } from '../actores';
 
 @Component({
   selector: 'app-crear-actor',
@@ -7,6 +7,8 @@ import { actoresCreacionDTO } from '../actores';
   styleUrls: ['./crear-actor.component.css']
 })
 export class CrearActorComponent {
+  modeloFather:actoresDTO = {Nombre: '', fechaNacimiento : new Date(), foto : '', biografia: ''}
+
   guardarCambios(actor: actoresCreacionDTO){
     console.log(actor);
   }

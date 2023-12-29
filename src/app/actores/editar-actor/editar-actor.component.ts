@@ -9,9 +9,9 @@ import { actoresCreacionDTO, actoresDTO } from '../actores';
   styleUrls: ['./editar-actor.component.css']
 })
 export class EditarActorComponent implements OnInit {
-  constructor(private ActivatedRoute:ActivatedRoute){}
 
-  modeloFather:actoresDTO = {Nombre: 'Espinoza', fechaNacimiento : new Date(), foto : 'assets/img/actores/gal.jpg'}
+
+  modeloFather:actoresDTO = {Nombre: 'Espinoza', fechaNacimiento : new Date(), foto : 'assets/img/actores/gal.jpg', biografia: ''}
 
 
   ngOnInit(): void {
