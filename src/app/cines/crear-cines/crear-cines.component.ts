@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { cineCreacionDTO } from '../cine';
 @Component({
   selector: 'app-crear-cines',
   templateUrl: './crear-cines.component.html',
@@ -8,12 +9,14 @@ import { Router } from '@angular/router';
 })
 export class CrearCinesComponent implements OnInit {
     constructor(private router:Router, private formBouilder:FormBuilder){}
-    form!: FormGroup;
+
 
     ngOnInit(): void {
-      this.form = this.formBouilder.group({
-        Nombre:''
-      })
+
     };
+
+    guardarformulario(data:cineCreacionDTO){
+      console.log(data);
+    }
 
 }

@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule    } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { ListPelisComponent } from './listados/list-pelis/list-pelis.component';
 import { ListadoGenericoPelisComponent } from './utilidades/listado-generico-pelis/listado-generico-pelis.component';
-
-import { ReactiveFormsModule    } from '@angular/forms';
-
 import { LandingPageComponent   } from './landing-page/landing-page.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
 import { PageNotFoundComponent  } from './page-not-found/page-not-found.component';
@@ -30,7 +29,10 @@ import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-pe
 import { FormularioActoresComponent } from './actores/formulario-actores/formulario-actores.component';
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
-import { MarkdownModule } from 'ngx-markdown';
+import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
+import { MapaComponent } from './utilidades/mapa/mapa.component';
+
+
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { MarkdownModule } from 'ngx-markdown';
     FormularioActoresComponent,
     InputImgComponent,
     InputMarkdownComponent,
+    FormularioCineComponent,
+    MapaComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,8 @@ import { MarkdownModule } from 'ngx-markdown';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
