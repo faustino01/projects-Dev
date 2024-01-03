@@ -8,7 +8,7 @@ import { cineCreacionDTO, cineDTO } from '../cine';
 })
 export class EditarCineComponent {
 
-  modeloFather : cineDTO = {nombre:'sala 1'};
+  modeloFather : cineDTO = {nombre:'sala 1', latitud : 25.665046968935993, longitud: -100.32577514648439};
 
   guardarformulario(data:cineCreacionDTO){
     console.log(data);

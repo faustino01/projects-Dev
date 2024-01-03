@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { LeafletMouseEvent, Marker, latLng, marker, tileLayer } from 'leaflet';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LeafletMouseEvent, Marker, icon, latLng, marker, tileLayer } from 'leaflet';
 import { coordenadaDTO } from './coordenada';
 
 @Component({
@@ -7,8 +7,10 @@ import { coordenadaDTO } from './coordenada';
   templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css']
 })
-export class MapaComponent {
+export class MapaComponent implements OnInit{
 
+
+  @Input() coordenadaInicialchild:coordenadaDTO[] = [];
   @Output() coordenadaSelect:EventEmitter<coordenadaDTO> = new EventEmitter<coordenadaDTO>();
 
   options = {
@@ -26,7 +28,27 @@ export class MapaComponent {
     const longitud = event.latlng.lng;
     console.log({latitud,longitud});
     this.capas = [];
-    this.capas.push(marker([latitud,longitud]));
+    this.capas.push(marker([latitud,longitud],{
+      icon : icon({
+        iconSize: [25,41],
+        iconAnchor:[13,41],
+        iconUrl: 'marker-icon.png',
+        iconRetinaUrl: 'markert-icon-2x.png',
+        shadowUrl: 'assets/marker-shadow.png'
+      })
+    }));
     this.coordenadaSelect.emit({latitud:latitud,longitud:longitud});
+  }
+
+  ngOnInit(): void {
+    this.capas = this.coordenadaInicialchild.map(valor => marker([valor.latitud,valor.longitud],{
+      icon : icon({
+        iconSize: [25,41],
+        iconAnchor:[13,41],
+        iconUrl: 'marker-icon.png',
+        iconRetinaUrl: 'markert-icon-2x.png',
+        shadowUrl: 'assets/marker-shadow.png'
+      })
+    }));
   }
 }
