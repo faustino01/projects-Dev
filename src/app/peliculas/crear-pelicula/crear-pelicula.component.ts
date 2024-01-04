@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { peliCreacionDTO } from '../pelicula';
 
 @Component({
   selector: 'app-crear-pelicula',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CrearPeliculaComponent {
 
+  formvaluesFather(event:peliCreacionDTO){
+    console.log(event);
+  }
 }

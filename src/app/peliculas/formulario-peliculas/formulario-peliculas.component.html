@@ -1,0 +1,14 @@
+<p>formulario-peliculas works!</p>
+
+<form (submit)="OnSubmit()" [formGroup]="Form">
+  <mat-form-field appearance="outline">
+      <mat-label>Titulo</mat-label>
+      <input formControlName="titulo" matInput>
+      <mat-error>El campo es requerido</mat-error>
+  </mat-form-field>
+
+  <div>
+    <button mat-flat-button color="primary" [disabled]="!Form.valid">Guardar</button>
+    <a mat-stroked-button routerLink="">cancelar</a>
+  </div>
+</form>

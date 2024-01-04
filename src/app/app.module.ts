@@ -31,6 +31,7 @@ import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
+import { FormularioPeliculasComponent } from './peliculas/formulario-peliculas/formulario-peliculas.component';
 
 
 
@@ -60,6 +61,7 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
     InputMarkdownComponent,
     FormularioCineComponent,
     MapaComponent,
+    FormularioPeliculasComponent,
   ],
   imports: [
     BrowserModule,
