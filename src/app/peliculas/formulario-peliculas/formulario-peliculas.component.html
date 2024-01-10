@@ -6,9 +6,33 @@
       <input formControlName="titulo" matInput>
       <mat-error>El campo es requerido</mat-error>
   </mat-form-field>
+  <div class="contendor-checkbox">
+    <mat-checkbox formControlName="enCines">En Cines</mat-checkbox>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Trailer</mat-label>
+    <input formControlName="trailer" matInput>
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Fecha de Lanzamiento</mat-label>
+    <input formControlName="fechaLanzamiento" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <h4>Seleccionar Poster</h4>
+
+  <app-input-img [imgImgC] = "pelisvalueChild.poster" (archivoSeleccionadoChild)="archivoSeleccionado($event)"></app-input-img>
+
+  <h4>Resumen de la Pelicula</h4>
+
+  <app-input-markdown [contenidoMarkdown]="pelisvalueChild.resumen" (changeMarkdown)="changeMarkDown($event)" [placeHolderTextarea]="'Resumen'"></app-input-markdown>
 
   <div>
     <button mat-flat-button color="primary" [disabled]="!Form.valid">Guardar</button>
-    <a mat-stroked-button routerLink="">cancelar</a>
+    <a mat-stroked-button routerLink="">Cancelar</a>
   </div>
 </form>

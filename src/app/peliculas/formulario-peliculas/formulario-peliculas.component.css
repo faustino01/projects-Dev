@@ -1,7 +1,14 @@
 form {
+  max-width: 500px;
   margin-left: 1rem;
+}
+mat-form-field {
+  width: 100%;
 }
 button {
   margin-right: 1rem;
+}
+contendor-checkbox{
+  margin-bottom: 1rem;
 }
 

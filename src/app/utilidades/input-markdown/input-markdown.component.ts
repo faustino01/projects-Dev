@@ -7,9 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class InputMarkdownComponent {
 
-  @Output() changeMarkdown:EventEmitter<string> = new EventEmitter<string>(); 
+  @Output() changeMarkdown:EventEmitter<string> = new EventEmitter<string>();
+  @Input() placeHolderTextarea:string='Texto'
 
-  contenidoMarkdown = '';
+
+  @Input() contenidoMarkdown = '';
   inputTextArea(event:Event){
    this.contenidoMarkdown = (event.target as HTMLInputElement).value;
    this.changeMarkdown.emit(this.contenidoMarkdown);
