@@ -2,7 +2,7 @@
     <mat-tab label="Editar">
         <mat-form-field appearance="fill">
             <mat-label>{{placeHolderTextarea}}</mat-label>
-            <textarea (input)="inputTextArea($event)"  matInput></textarea>
+            <textarea (change)="inputTextArea($event)"  matInput></textarea>
         </mat-form-field>
     </mat-tab>
     <mat-tab label="Preview">

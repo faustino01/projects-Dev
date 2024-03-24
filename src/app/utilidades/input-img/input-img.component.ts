@@ -10,13 +10,13 @@ export class InputImgComponent {
   @Input() imgImgC!:any;
   @Output() archivoSeleccionadoChild: EventEmitter<File> = new EventEmitter<File>();
   imagenBase64!: string;
-  
+
   change(event:any){
     if(event.target.files.length > 0){
         const file: File =event.target.files[0];
         toBase64(file).then((value:any) => this.imagenBase64 = value)
         .catch(error => console.log(error));
-        
+
         this.archivoSeleccionadoChild.emit(file)
         this.imgImgC = null;
     }

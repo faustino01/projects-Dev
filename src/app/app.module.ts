@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule    } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
@@ -32,6 +32,7 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
 import { FormularioPeliculasComponent } from './peliculas/formulario-peliculas/formulario-peliculas.component';
+import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
 
 
 
@@ -62,6 +63,7 @@ import { FormularioPeliculasComponent } from './peliculas/formulario-peliculas/f
     FormularioCineComponent,
     MapaComponent,
     FormularioPeliculasComponent,
+    SelectorMultipleComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import { FormularioPeliculasComponent } from './peliculas/formulario-peliculas/f
     MaterialModule,
     ReactiveFormsModule,
     MarkdownModule.forRoot(),
-    LeafletModule
+    LeafletModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

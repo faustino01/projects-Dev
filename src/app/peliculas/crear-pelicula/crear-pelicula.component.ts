@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { peliCreacionDTO } from '../pelicula';
+import { peliCreacionDTO, peliDTO } from '../pelicula';
 
 @Component({
   selector: 'app-crear-pelicula',
@@ -8,6 +8,7 @@ import { peliCreacionDTO } from '../pelicula';
 })
 export class CrearPeliculaComponent {
 
+ pelisDataFather:peliDTO = {titulo : '',resumen: '', enCines : false, fechaLanzamiento: new Date(), trailer:'', poster:''};
   formvaluesFather(event:peliCreacionDTO){
     console.log(event);
   }

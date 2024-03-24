@@ -12,9 +12,15 @@ export class InputMarkdownComponent {
 
 
   @Input() contenidoMarkdown = '';
-  inputTextArea(event:Event){
+
+
+
+  inputTextArea(event:Event)
+  {
+
    this.contenidoMarkdown = (event.target as HTMLInputElement).value;
    this.changeMarkdown.emit(this.contenidoMarkdown);
+  // console.log(event);
   }
 
 }
