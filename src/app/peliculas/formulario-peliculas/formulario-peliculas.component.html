@@ -35,6 +35,14 @@
 
   <app-input-markdown [contenidoMarkdown]="pelisvalueChild.resumen" (changeMarkdown)="changeMarkDown($event)" [placeHolderTextarea]="'Resumen'"></app-input-markdown>
 
+  <h4>Relacionar Cines</h4>
+
+  <app-selector-multiple [Seleccionados]="cineSeleccionadosFather" [NoSeleccionados]="cineNoSeleccionadosFather"></app-selector-multiple>
+
+  <h4>Seleccione los actores</h4>
+
+  <app-autocomplete-actores></app-autocomplete-actores>
+
   <div>
     <button mat-flat-button color="primary" [disabled]="!Form.valid">Guardar</button>
     <a mat-stroked-button routerLink="">Cancelar</a>

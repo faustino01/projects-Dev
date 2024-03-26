@@ -13,11 +13,21 @@ export class FormularioPeliculasComponent implements OnInit{
   @Output() formvaluesChild: EventEmitter<peliCreacionDTO> =  new EventEmitter<peliCreacionDTO>();
   @Input() pelisvalueChild!:peliDTO;
 
-  generoNoSeleccionadosFather:MultipleSelectorModel[] = [{ llave:1, valor:'Ficcion'},{ llave:2, valor: 'Terror'},{llave:3, valor:'comedia'}];
+  generoNoSeleccionadosFather:MultipleSelectorModel[] = [
+                                                          { llave:1, valor:'Ficcion'},
+                                                          { llave:2, valor: 'Terror'},
+                                                          {llave:3, valor:'comedia'}
+                                                        ];
   generosSeleccionadosFather:MultipleSelectorModel[] = [];
+
+
+  cineNoSeleccionadosFather:MultipleSelectorModel[] = [
+                                                        {llave:1,valor:'Plaza Center City'},
+                                                        {llave:2,valor:'Plaza MX'},
+                                                        {llave:3,valor:'Plaza Cumbres'}
+                                                      ];
+  cineSeleccionadosFather:MultipleSelectorModel[] = [];
   Form!:FormGroup;
-
-
   constructor(private fb:FormBuilder){}
 
   ngOnInit(): void {
@@ -28,7 +38,8 @@ export class FormularioPeliculasComponent implements OnInit{
                   trailer: '',
                   fechaLanzamiento: '',
                   poster: '',
-                  generosId:''
+                  generosId:'',
+                  cinesId:''
                 });
 
     if(this.pelisvalueChild !== undefined){
@@ -50,6 +61,9 @@ export class FormularioPeliculasComponent implements OnInit{
   OnSubmit(){
     const genorid = this.generosSeleccionadosFather.map(val => val.llave);
     this.Form.get('generosId')?.setValue(genorid);
+
+    const cineid = this.cineSeleccionadosFather.map(val => val.llave);
+    this.Form.get('cinesId')?.setValue(cineid);
     // console.log(genorid);
     this.formvaluesChild.emit(this.Form.value);
   }
