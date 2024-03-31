@@ -41,7 +41,7 @@
 
   <h4>Seleccione los actores</h4>
 
-  <app-autocomplete-actores></app-autocomplete-actores>
+  <app-autocomplete-actores [actoresSeleccionadosCHILD]="actoresSeleccionadosFather"></app-autocomplete-actores>
 
   <div>
     <button mat-flat-button color="primary" [disabled]="!Form.valid">Guardar</button>

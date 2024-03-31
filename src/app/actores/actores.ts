@@ -11,3 +11,9 @@ export interface actoresDTO{
     foto : string;
     biografia: string;
 }
+
+export interface actoresSelectMoviesDTO{
+    Nombre:string;
+    personaje:string;
+    foto:string;   
+}

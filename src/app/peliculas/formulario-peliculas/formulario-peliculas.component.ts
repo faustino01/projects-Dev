@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { peliCreacionDTO, peliDTO } from '../pelicula';
 import { MultipleSelectorModel } from 'src/app/utilidades/selector-multiple/MultipleSelectorModel';
+import { actoresSelectMoviesDTO } from 'src/app/actores/actores';
 
 @Component({
   selector: 'app-formulario-peliculas',
@@ -12,6 +13,7 @@ export class FormularioPeliculasComponent implements OnInit{
 
   @Output() formvaluesChild: EventEmitter<peliCreacionDTO> =  new EventEmitter<peliCreacionDTO>();
   @Input() pelisvalueChild!:peliDTO;
+  
 
   generoNoSeleccionadosFather:MultipleSelectorModel[] = [
                                                           { llave:1, valor:'Ficcion'},
@@ -27,6 +29,10 @@ export class FormularioPeliculasComponent implements OnInit{
                                                         {llave:3,valor:'Plaza Cumbres'}
                                                       ];
   cineSeleccionadosFather:MultipleSelectorModel[] = [];
+
+
+  actoresSeleccionadosFather:actoresSelectMoviesDTO[] = [];
+
   Form!:FormGroup;
   constructor(private fb:FormBuilder){}
 
@@ -39,7 +45,8 @@ export class FormularioPeliculasComponent implements OnInit{
                   fechaLanzamiento: '',
                   poster: '',
                   generosId:'',
-                  cinesId:''
+                  cinesId:'',
+                  actores:''
                 });
 
     if(this.pelisvalueChild !== undefined){
@@ -65,7 +72,12 @@ export class FormularioPeliculasComponent implements OnInit{
     const cineid = this.cineSeleccionadosFather.map(val => val.llave);
     this.Form.get('cinesId')?.setValue(cineid);
     // console.log(genorid);
+    
+    this.Form.get('actores')?.setValue(this.actoresSeleccionadosFather);
+
     this.formvaluesChild.emit(this.Form.value);
+
+
   }
 
 
