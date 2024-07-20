@@ -14,7 +14,7 @@ export class CrearCinesComponent implements OnInit {
     ngOnInit(): void {
 
     };
-
+      // pongo un comentario de prueba Thinkpad
     guardarformulario(data:cineCreacionDTO){
       console.log(data);
     }
