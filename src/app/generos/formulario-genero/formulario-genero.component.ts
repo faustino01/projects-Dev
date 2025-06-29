@@ -13,7 +13,7 @@ export class FormularioGeneroComponent implements OnInit {
   form!:FormGroup;
  
   @Input() modelo!:generoCreacionDTO;
-  @Output() submit:EventEmitter<generoCreacionDTO> = new EventEmitter<generoCreacionDTO>();
+  @Output() onSubmit:EventEmitter<generoCreacionDTO> = new EventEmitter<generoCreacionDTO>();
  
 
   constructor(private formBuilder:FormBuilder,private router:Router){}
@@ -50,7 +50,7 @@ export class FormularioGeneroComponent implements OnInit {
 
   guardarCambiosChild(){
     // this.router.navigate(['/generos']);
-    this.submit.emit(this.form.value);
+    this.onSubmit.emit(this.form.value);
   }
 
 }
